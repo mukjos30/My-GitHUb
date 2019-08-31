@@ -4,36 +4,40 @@
   <nav  class="navbar navbar-inverse navbar-fixed-top" style="height: 7%;">
     <div class="container">
       <ul class="navbar-nav">
-          <form action=""><div class="form-group"><input type="text" style="margin-top:7%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); border: none; color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form>
+          <form action=""><div class="form-group"><input type="text" style="margin-top:2%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); border: none; color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form>
             </ul>
            </div>
           </nav>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-4">
-                <img src="{{profile.avatar_url}}" class="img-thumbnail github-avatar" alt="Profile Image">
-        </div>
-        <div class="col-md-8">
-          <div class="start">
+          
+        <div class="col-md-8"> 
+            <div class="start">
+            <img src="{{profile.avatar_url}}" class="img-thumbnail github-avatar" alt="Profile Image"> 
+          
+              
+              <ul class="list-group">
+               
               <span class="label label-default">{{profile.public_repos}} Public Repos</span>
               <span class="label label-primary">{{profile.public_gist}} Public Gist</span>
               <span class="label label-success">{{profile.followers}} Followers</span>
               <span class="label label-info">{{profile.following}} Following</span>
-              <div class="panel panel-default">
-                <br>
-                  <ul class="list-group">
-                      <li class="list-group-item"><strong>Username:</strong> {{profile.login}}</li>
-                      <li class="list-group-item"><strong>Location:</strong> {{profile.location}}</li>
-                      <li class="list-group-item"><strong>Email:</strong> {{profile.email}}</li>
-                      <li class="list-group-item"><strong>Bio:</strong> {{profile.bio}}</li>
-                      <li class="list-group-item"><strong>Member Since:</strong> {{profile.created_at}}</li>
-                  </ul>
-                <div class="panel-body">
-                  <div class="row">
+              
+              <li class="list-group-item"><strong>Username:</strong> {{profile.login}}</li>
+              <li class="list-group-item"><strong>Location:</strong> {{profile.location}}</li>
+              <li class="list-group-item"><strong>Email:</strong> {{profile.email}}</li>
+              <li class="list-group-item"><strong>Bio:</strong> {{profile.bio}}</li>
+              <li class="list-group-item"><strong>Member Since:</strong> {{profile.created_at}}</li>
+               
+                                                  </ul>
+                                                  
+                                                </div>
+                                                </div>
+                                                  <!-- <div class="panel-heading"> -->
+                          <h3 class="panel-title">Repositories</h3>
+                      <!-- </div> -->
                     <div class="col-md-12">
                       <div *ngFor="let repo of repos">
                         <div class="row">
-                          <div class="col-md-9">
+                           <div class="col-md-9">
                             <h3>{{repo.name}}</h3>
                              <p>{{repo.description}}</p>
                              <h4><a href="{{profile.html_url}}" target="_blank">View on github</a></h4>
@@ -45,10 +49,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    
+                  <!-- </div>
                 </div>
               </div>
-              </div>
-              </div>
-   </div>
+              </div> --> 
+              <!-- </div>
+   </div> -->
