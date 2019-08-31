@@ -4,7 +4,7 @@
   <nav  class="navbar navbar-inverse navbar-fixed-top" style="height: 7%;">
     <div class="container">
       <ul class="navbar-nav">
-         <li><form action=""><div class="form-group"><input type="text" class=" " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form></li>
+         <li><form action=""><div class="form-group"><input type="text" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form></li>
             </ul>
            </div>
           </nav>
@@ -22,8 +22,6 @@
               <div class="panel panel-default">
                 <br>
                   <ul class="list-group">
-                    
-
                       <li class="list-group-item"><strong>Username:</strong> {{profile.login}}</li>
                       <li class="list-group-item"><strong>Location:</strong> {{profile.location}}</li>
                       <li class="list-group-item"><strong>Email:</strong> {{profile.email}}</li>
