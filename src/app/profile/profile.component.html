@@ -7,7 +7,7 @@
         <p><em> <strong>This app helps people to know someone,s ghithub Api using his or her username .to use it you have to put ghithub username in this search engine and press enter to display Ghithub 
           the following informations of the  ghithub user are displayed while you press inter!!!!!!
         </strong></em></p>
-         <form action=""><div class="form-group"><input type="text" style="margin-top:7%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); width:1250px; margin-top:10px; border-radius:20px;border-bottom-right-radius:20px; margin-left:-100px;color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form> 
+         <form action=""><div class="form-group"><input type="text" style="margin-top:7%;   height: 7%;background-color: rgb(70, 68, 68); width:1250px; margin-top:10px; border-radius:20px;border-bottom-right-radius:20px; margin-left:-100px;color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form> 
            </ul> 
            </div>
           </nav>
@@ -31,35 +31,25 @@
               <li class="list-group-item"><strong>Member since:</strong> {{profile.created_at}}</li>
               <li class="list-group-item">Repositories </li>
             </div>
-                                                  </ul>
-                                                 
-              
-                                                  <!-- <h4><a href="{{profile.html_url}}" >View on github</a></h4> -->
-                                                </div>
-                                                </div>
-                                                  <!-- <div class="panel-heading"> -->
-                          
-                      <!-- </div> -->
-                    <div class="col-md-12">
-                      <div *ngFor="let repo of repos">
-                        <div class="row">
-                           <div class="col-md-9">
-                             
-                            <h3>{{repo.name}}</h3>
-                             <p>{{repo.description}}</p>
-                             <h4><a href="{{profile.html_url}}" target="_blank">View on github</a></h4>
-                            </div>
-                            <div class="col-md-3">
-                              <span class="label label-default">{{repo.watchers}} Stars </span>
-                              <span class="label label-primary">{{repo.forks}} Forks </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    
-                  </div>
-                <!-- </div>
+           </ul>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div *ngFor="let repo of repos">
+            <div class="row">
+              <div class="col-md-9">
+                <h3>{{repo.name}}</h3>
+                <p>{{repo.description}}</p>
+                <h4><a href="{{profile.html_url}}" target="_blank">View on github</a></h4>
               </div>
-              </div> -->  
-              <!-- </div>
-   </div> -->
+              <div class="col-md-3">
+                <div class="repo">
+                <span class="label label-default">{{repo.watchers}} Stars </span>
+                <span class="label label-primary">{{repo.forks}} Forks </span>
+              </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+             
