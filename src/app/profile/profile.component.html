@@ -4,7 +4,10 @@
   <nav  class="" style="height: 7%;">
     <div class="container"> 
       <ul class="navbar-nav">
-         <form action=""><div class="form-group"><input type="text" style="margin-top:7%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); width:3000px; margin-top:10px; margin-left:-100px;color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form> 
+        <p><em> <strong>This app helps people to know someone,s ghithub Api using his or her username .to use it you have to put ghithub username in this search engine and press enter to display Ghithub 
+          the following informations of the  ghithub user are displayed while you press inter!!!!!!
+        </strong></em></p>
+         <form action=""><div class="form-group"><input type="text" style="margin-top:7%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); width:1250px; margin-top:10px; border-radius:20px;border-bottom-right-radius:20px; margin-left:-100px;color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form> 
            </ul> 
            </div>
           </nav>
@@ -20,15 +23,18 @@
               <span class="label label-primary">{{profile.public_gist}} Public Gist</span>
               <span class="label label-success">{{profile.followers}} Followers</span>
               <span class="label label-info">{{profile.following}} Following</span>
-              
-              <li class="list-group-item"><strong>Username:</strong> {{profile.login}}</li>
-              <li class="list-group-item"><strong>Location:</strong> {{profile.location}}</li>
+               <div class=" group">
+               <li class="list-group-item"><strong>Username:</strong> {{profile.login}}</li>
+              <li class="list-group-item"><strong>Location: </strong> {{profile.location}}</li>
               <li class="list-group-item"><strong>Email:</strong> {{profile.email}}</li>
-              <li class="list-group-item"><strong>Bio:</strong> {{profile.bio}}</li>
-              <li class="list-group-item"><strong>Member Since:</strong> {{profile.created_at}}</li>
-              
+              <li class="list-group-item"><strong>Bio: </strong> {{profile.bio}}</li>
+              <li class="list-group-item"><strong>Member since:</strong> {{profile.created_at}}</li>
+              <li class="list-group-item">Repositories </li>
+            </div>
                                                   </ul>
-                                                  <h3 class="panel-title">Repositories</h3>
+                                                 
+              
+                                                  <!-- <h4><a href="{{profile.html_url}}" >View on github</a></h4> -->
                                                 </div>
                                                 </div>
                                                   <!-- <div class="panel-heading"> -->
