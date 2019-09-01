@@ -1,17 +1,17 @@
  
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
   crossorigin="anonymous">
-  <nav  class="navbar navbar-inverse navbar-fixed-top" style="height: 7%;">
-    <div class="container">
+  <nav  class="" style="height: 7%;">
+    <div class="container"> 
       <ul class="navbar-nav">
-          <form action=""><div class="form-group"><input type="text" style="margin-top:2%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); border: none; color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form>
-            </ul>
+         <form action=""><div class="form-group"><input type="text" style="margin-top:7%;  width: 130%; height: 15%;background-color: rgb(70, 68, 68); width:3000px; margin-top:10px; margin-left:-100px;color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form> 
+           </ul> 
            </div>
           </nav>
-          
+          <div class="mid"> 
         <div class="col-md-8"> 
             <div class="start">
-            <img src="{{profile.avatar_url}}" class="img-thumbnail github-avatar" alt="Profile Image"> 
+            <img src="{{profile.avatar_url}}" > 
           
               
               <ul class="list-group">
@@ -38,6 +38,7 @@
                       <div *ngFor="let repo of repos">
                         <div class="row">
                            <div class="col-md-9">
+                             
                             <h3>{{repo.name}}</h3>
                              <p>{{repo.description}}</p>
                              <h4><a href="{{profile.html_url}}" target="_blank">View on github</a></h4>
@@ -50,9 +51,9 @@
                         </div>
                       </div>
                     
-                  <!-- </div>
-                </div>
+                  </div>
+                <!-- </div>
               </div>
-              </div> --> 
+              </div> -->  
               <!-- </div>
    </div> -->
