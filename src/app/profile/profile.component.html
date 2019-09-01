@@ -4,7 +4,7 @@
   <nav  class="" style="height: 7%;">
     <div class="container"> 
       <ul class="navbar-nav">
-        <p><em> <strong>This app helps people to know someone,s ghithub Api using his or her username .to use it you have to put ghithub username in this search engine and press enter to display Ghithub 
+        <p><em> <strong>This app helps people to know someone,s ghithub Api using his or her username .to use it you have to put ghithub username in this search engine and press enter to display Ghithub user Api 
           the following informations of the  ghithub user are displayed while you press inter!!!!!!
         </strong></em></p>
          <form action=""><div class="form-group"><input type="text" style="margin-top:7%;   height: 7%;background-color: rgb(70, 68, 68); width:1250px; margin-top:10px; border-radius:20px;border-bottom-right-radius:20px; margin-left:-100px;color: ghostwhite;" class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  " placeholder="search or jump to" [(ngModel)]="username" name="username"  (keyup.Enter)="findProfile()"></div></form> 
@@ -14,7 +14,7 @@
           <div class="mid"> 
         <div class="col-md-8"> 
             <div class="start">
-            <img src="{{profile.avatar_url}}" > 
+                <img src="{{profile.avatar_url}}" > 
           
               
               <ul class="list-group">
